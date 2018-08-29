@@ -6,7 +6,7 @@
 # Input: Two urls of the files from project gutenberg
 # Output: Chi-Square value
 # Instruction to run the code:
-#	python3 hw1.py https://www.gutenberg.org/files/1342/1342-0.txt https://www.gutenberg.org/files/2650/2650-0.txt
+#	python3 Chi-Square Statistic Comparison.py https://www.gutenberg.org/files/1342/1342-0.txt https://www.gutenberg.org/files/2650/2650-0.txt
 ##################################################################################################################
 
 
