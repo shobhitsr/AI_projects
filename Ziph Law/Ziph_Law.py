@@ -1,14 +1,14 @@
 #!/usr/bin/python3
 #############################################################
 #   Name : Shobhit Srivastava
-#   Assignment 2
-#   Due Date : 03/02/2018
-#   Purpose : To understand the basic concepts of python3
+#   Purpose : In this project the primary objective was to find some empirical evidence for (or against) Ziph's Law. Zipf's law states that frequency is 
+#	      inversely proportional to rank. For this purpose the frequency of the word length was looked at.
 #   Input : Text file(In the provided folder) for which we collect the data
 #   Output : Tables with different data about the text file
 #   Instruction to run the code :
 #       python3 Ziph_Law.py Book.txt > output.txt
 #############################################################
+
 import sys
 import codecs
 import re
@@ -16,6 +16,7 @@ import collections
 import operator
 import math
 
+#Function to print the results in assending format.
 def printAccendingOrder(letterCount,rangeStart):
     # prints the character count in accending order
     for key, value in sorted(letterCount.items()):
@@ -25,6 +26,7 @@ def printAccendingOrder(letterCount,rangeStart):
                     print("{:<2} {:<7}".format(key,value), end = " ")
     print('\n')
 
+#Function to print the results in the order of their frequency
 def printMostCommonOrder(letterCount,rangeStart):
     # prints the character count in the order of frequency
     ctr = 0
@@ -36,6 +38,7 @@ def printMostCommonOrder(letterCount,rangeStart):
                     print("{:<2} {:<7}".format(key,value), end = " ")
     print('\n')
 
+#Function to print the result in decending order of their length
 def wordCountDecOrder(letterPerWord, rangeStart):
     # prints the result of the word count with the length of the words
     for key, value in sorted(letterPerWord.items()):
@@ -53,6 +56,7 @@ letterCount = collections.Counter(lowerCaseBook) #counting all the retters
 characterCounter = 0
 characterRead = 0
 distintCharacter = 0
+
 for key, value in sorted(letterCount.items()):
     # counting the characters and the distint characters and how many characters read
     if key != ' ' and key != '-' and key != '\'':
