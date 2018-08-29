@@ -18,7 +18,6 @@ import math
 
 #Function to print the results in assending format.
 def printAccendingOrder(letterCount,rangeStart):
-    # prints the character count in accending order
     for key, value in sorted(letterCount.items()):
         if key != ' ' and key != '-' and key != '\'':
             for i in range(rangeStart,123,6):
@@ -28,7 +27,6 @@ def printAccendingOrder(letterCount,rangeStart):
 
 #Function to print the results in the order of their frequency
 def printMostCommonOrder(letterCount,rangeStart):
-    # prints the character count in the order of frequency
     ctr = 0
     for key, value in letterCount.most_common():
         if key != ' ' and key != '-' and key != '\'':
@@ -40,7 +38,6 @@ def printMostCommonOrder(letterCount,rangeStart):
 
 #Function to print the result in decending order of their length
 def wordCountDecOrder(letterPerWord, rangeStart):
-    # prints the result of the word count with the length of the words
     for key, value in sorted(letterPerWord.items()):
         for i in range(rangeStart,21,4):
             if key == i:
